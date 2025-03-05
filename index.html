@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Allisa Diyan Salsabila</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+            max-width: 900px;
+            margin: 20px auto;
+            background: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            width: 35%;
+            background: rgb(86, 83, 83);
+            padding: 20px;
+            color: black;
+            text-align: center;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .sidebar .section {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .sidebar .section h3 {
+            border-bottom: 2px solid rgb(201, 193, 193);
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar .section ul li {
+            margin: 5px 0;
+        }
+
+        .social-icons {
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .main-content {
+            width: 65%;
+            padding: 20px;
+            background-color: rgb(99, 98, 98);
+            border-left: 3px solid white;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: white;
+            border-bottom: 2px solid rgba(215, 207, 207, 0.753);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="profile.jpg" alt="Allisa Diyan Salsabila">
+            <h2 id="name">Allisa Diyan Salsabila</h2>
+            <h3 id="Work"></h3>
+            <p id="Workplace"></p>
+            <p id="Motto"></p>
+
+            <div class="social-icons">
+                <a href="https://wa.me/6285779714959" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/allisadiyan" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="Twitter:Allisa25_">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Twitter">
+                </a>
+            </div>
+            
+            <div class="section">
+                <h3>About Me</h3>
+                <p id="description"></p>
+            </div>
+
+            <div class="section">
+                <h3>Skills</h3>
+                <ul id="skills"></ul>
+            </div>
+
+            <div class="section">
+                <h3>Interests</h3>
+                <ul id="interests"></ul>
+            </div>
+
+            <div class="section">
+                <h3>Languages</h3>
+                <ul id="languages"></ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>Experience</h2>
+                <ul id="experience"></ul>
+            </div>
+
+            <div class="section">
+                <h2>Certificate</h2>
+                <ul id="achievements"></ul>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <ul id="education"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setText(id, text) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = text;
+            }
+        }
+
+        function populateList(elementId, data) {
+            const list = document.getElementById(elementId);
+            if (list) {
+                list.innerHTML = "";
+                data.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    list.appendChild(li);
+                });
+            }
+        }
+
+        setText("Work", "Mathematics Education Student");
+        setText("Workplace", "University of Sultan Ageng Tirtayasa");
+        setText("description", "I am Allisa Diyan Salsabila, a second-semester Mathematics Education student with strong public speaking, time management, and task organization skills. I am highly adaptable in learning, detail-oriented, and thrive in collaborative environments.Passionate about reading, writing, K-Dramas, K-POP, event organizing, and learning foreign languages, I continuously seek opportunities to grow.")
+        populateList("skills", ["Notion", "Canva", "Microsoft Word", "Microsoft Excel", "Google Sheets", "Zoom"]);
+        populateList("interests", ["Reading", "K-Drama", "Writing", "K-POP", "Event Organizer", "Learn Foreign Languages"]);
+        populateList("languages", ["Indonesian", "English (Intermediate)", "Korean (Basic - able to understand simple phrases and common expressions)"]);
+        setText("Motto", "Hard work betrays none, but dreams betray many - LTY");
+        populateList("experience", [
+            "Vice Chairperson 2 – Student Council (OSIS) (2023-2024)",
+            "Secretary of the Olympiad Team (2023-2024)",
+            "Member of Division 6 – Student Council (OSIS) (2021-2022)",
+            "Secretary of Science & Research Club (KIR) – MIPA Division (2022-2023)",
+            "Member of Science & Research Club (KIR) – MIPA Division (2021-2022)"
+        ]);
+        populateList("achievements", [
+            "7th Place Winner in the Regency-Level Geography Olympiad (OSN)",
+            "Silver Medalist in the National Science Olympiad (Provincial & National Level)"
+        ]);
+        populateList("education", [
+            "Universitas Sultan Ageng Tirtayasa - Mathematics Education", "SMA Negeri 4 Kabupaten Tangerang - Graduated 2024", "SMP Negeri 1 Cikupa - Graduated 2021", "SDS Islam Miftahul Jannah - Graduated 2018"
+        ]);
+    </script>
+</body>
+</html>

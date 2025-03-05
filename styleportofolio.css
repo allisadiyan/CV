@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sidebar Kiri */
+.sidebar {
+    width: 30%;
+    background: rgb(233, 175, 238);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.sidebar h2, .sidebar h3 {
+    margin-top: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 5px 0;
+}
+
+/* Main Content */
+.main-content {
+    width: 70%;
+    padding: 20px;
+    background-color: #000000;
+    border-left: 3px solid #f4a261;
+    border-radius: 0 10px 10px 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #333;
+    border-bottom: 2px solid #f4a261;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 8px 0;
+    padding: 8px;
+    background: white;
+    border-radius: 5px;
+}
+
+/* **Tampilan Responsif untuk HP** */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    .sidebar, .main-content {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .main-content {
+        border-left: none;
+        border-top: 3px solid #f4a261;
+        padding-top: 15px;
+    }
+
+    .sidebar img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sidebar ul li {
+        font-size: 14px;
+    }
+}
